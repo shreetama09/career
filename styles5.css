@@ -1,0 +1,85 @@
+/* Contact Section Styling */
+.contact-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0c3434;
+  text-shadow: 0 0 10px #194242;
+  animation: dropFade 1.3s ease-out forwards;
+  opacity: 0;
+}
+
+.contact-subtext {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+  animation: fadeIn 2s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes dropFade {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.contact-form button {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  background-color: #00ffff;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffff;
+}

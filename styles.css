@@ -1,0 +1,126 @@
+/* Reset & base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+.btn {
+  background-color: #4CAF50; /* You can customize this */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+/* Hero Section Centering */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Animated Heading */
+.animated-text {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(270deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 10s linear infinite;
+  text-align: center;
+}
+
+.animated-subtext {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f2f2f2;
+  animation: textFade 5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes textFade {
+  0% { opacity: 1; color: #cccccc; }
+  100% { opacity: 0.8; color: #ff00ff; }
+}
+
+/* Start Button Styling */
+.btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffff;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+.btn:hover {
+  background-color: #00e6e6;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  transform: scale(1.05);
+}
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="styles3.css" />
+</head>
+<body>
+
+
+  <section class="results-section">
+    <h2 class="results-heading">Your Ideal Career Path</h2>
+    <p id="result-text" class="animated-result">Analyzing your journey...</p>
+  </section>
+
+  <script>
+    
+    const params = new URLSearchParams(window.location.search);
+const career = params.get('career');
+
+// If no career in query, try loading from localStorage
+let finalCareer = career || localStorage.getItem("lastCareer");
+
+if (finalCareer) {
+  document.getElementById("result-text").textContent =
+    `✨ You seem perfectly suited for a career in ${finalCareer}! ✨`;
+} else {
+  document.getElementById("result-text").textContent =
+    `🤔 Hmm… couldn't determine a career match. Try retaking the quiz!`;
+}
+  </script>
+</body>
+</html>
